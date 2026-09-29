@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Attendance Management System</h1>
+      <p>Simple student attendance tracker</p>
+    </header>
+
+    <section class="card">
+      <h2>Add Student</h2>
+      <div class="form-row">
+        <input type="text" id="studentName" placeholder="Student Name">
+        <input type="text" id="rollNo" placeholder="Roll Number">
+        <button onclick="addStudent()">Add Student</button>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card">
+        <h3 id="totalStudents">0</h3>
+        <p>Total Students</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="presentCount">0</h3>
+        <p>Present Today</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="absentCount">0</h3>
+        <p>Absent Today</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="table-header">
+        <h2>Student Attendance</h2>
+        <input type="text" id="searchBox" placeholder="Search student..." oninput="renderStudents()">
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Roll No.</th>
+              <th>Name</th>
+              <th>Present</th>
+              <th>Absent</th>
+              <th>Attendance %</th>
+              <th>Today's Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="studentTable"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
